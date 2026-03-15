@@ -2,6 +2,7 @@ from autoencoder1 import autoencoder, encoder, decoder
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def visualize(x_test, n=10):
     fig, axes = plt.subplots(2, n, figsize=(15, 3))
     fig.patch.set_facecolor('black')
