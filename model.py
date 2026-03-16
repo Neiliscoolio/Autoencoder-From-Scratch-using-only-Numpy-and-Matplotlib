@@ -33,7 +33,8 @@ class Sigmoid:
     
     def backward(self, grad):
         return grad * self.out * (1 - self.out)
-    
+
+#stacks all the layers allowing for a clean loop    
 class Sequential:
     def __init__(self, layers):
         self.layers = layers
@@ -48,7 +49,7 @@ class Sequential:
             gradient_in = layer.backward(gradient_in)
         return gradient_in
     
-    
+#optimizer, stochastic gradient descent
 class SGD:
     def __init__(self, layers, learning_rate=0.01):
         self.layers = layers
